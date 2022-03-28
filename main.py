@@ -1,4 +1,4 @@
-
+import numpy as np
 
 #test inputs
 inputs = [1, 2, 3, 2.5]
@@ -11,6 +11,11 @@ biases = [2, 3, 0.5]
 def neuron_output(inputs, weights,bias):
     return sum(inputs[i] * weights[i] for i in range(len(inputs)))+ bias
 
+#this can also be done with numpy because its just the dot product of weights and inputs
+
+#np.dot(weights,inputs) + bias
+
+
 def neuron_layer_output(inputs, weights, biases):
     outputs=[]
     for i in range(len(biases)):
@@ -20,3 +25,8 @@ def neuron_layer_output(inputs, weights, biases):
 
 
 print(neuron_layer_output(inputs, weights, biases))
+
+
+# for input in batches 
+# we will have to use matrix operations to calculate outputs
+
